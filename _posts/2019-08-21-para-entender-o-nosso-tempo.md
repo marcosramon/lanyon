@@ -15,6 +15,6 @@ Como na maior parte das vezes, temos que nos conformar diante do fato de que as 
 [^1]: Eu sei que nem todo mundo vê isso como utopia. E talvez seja mesmo o oposto. Mas as sociedades ocidentais democráticas defendem abertamente a perspectiva de que existem alguns valores bons (os ocidentais) e outros ruins. Nesse sentido, o que a maioria de nós busca, mesmo que indiretamente, é um mundo em que possamos, se não falar a mesma língua, pelo menos nos entender aceitando como básicos os mesmos princípios sociais.
 
 <figure style="" class="align-center">
-  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/virginia.png" alt="">
+  <img src="/assets/images/virginia.png" alt="">
   <figcaption>Ilustração de <a href="https://virginiamori.tumblr.com/post/185884649853/find-my-new-fine-art-prints-collection-online">Virginia Mori</a></figcaption>
 </figure>
