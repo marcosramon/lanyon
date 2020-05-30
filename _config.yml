@@ -16,6 +16,20 @@ author:
 # Gems
 plugins:
   - jekyll-paginate
+  
+author:
+  name: 'Marcos Ramon'
+  email: 'contato[at]marcosramon[dot]net'
+  github: 
+  twitter: mrtollens
+  linkedin: 
+  goodreads: marcosramon
+  orcid: 
+  google_scholar: 
+  email_md5: 
+  emailalt_md5: 
+  disqus_shortname: pmramon
+  bio: Pesquisador nas áreas de ensino, estética e cibercultura
 
 # Custom vars
 version:             1.1.0
