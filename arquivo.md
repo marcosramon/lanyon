@@ -1,18 +1,18 @@
 ---
-layout: page
-title: Arquivo
+layout: default
+title: Archive
 ---
 
-<!-- ## Blog Posts -->
+# Archive
 
-<!-- {% for post in site.posts %}
-  * {{ post.date | date_to_string }} &raquo; [ {{ post.title }} ]({{ post.url }})
-{% endfor %} -->
+Browse all posts by month and year.
 
-{% for post in site.posts %}
-<div>
-  <span style="float: left;"><a href="{{ post.url }}">{{ post.title }}</span>
-  <span style="float: right;">{{ post.date | date_to_string }}</span>
-</div>
-<div style="clear: both;"></div>
+{% assign postsByYearMonth = site.posts | group_by_exp: "post", "post.date | date: '%B %Y'" %}
+{% for yearMonth in postsByYearMonth %}
+  <h2>{{ yearMonth.name }}</h2>
+  <ul>
+    {% for post in yearMonth.items %}
+      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
 {% endfor %}
