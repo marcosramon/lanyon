@@ -3,25 +3,21 @@ layout: page
 title: Arquivo
 ---
 
-<<a name="posts"></a>
-<archieve>
-  <name>Posts</name>
-  {%- assign posts = site.posts | where:"categories","post" -%}
-  {%- assign groupedByYear = posts | group_by_exp:"post","post.date | date:'%Y' " -%}
-  <!-- total posts: {{ posts.size }} -->
+<!-- ## Blog Posts -->
 
-  {%- for yearitem in groupedByYear -%}
-  <yearlist>
-    <year>{{ yearitem.name }}</year>
+<!-- {% for post in site.posts %}
+  * {{ post.date | date_to_string }} &raquo; [ {{ post.title }} ]({{ post.url }})
+{% endfor %} -->
 
-    <list>
-    {%- for item in yearitem.items -%}
-      <item>
-        <date>{{ item.date | date:'%B %e'}}</date>
-        <span><a href="{{ item.url }}">{{ item.title }}</a></span>
-      </item>
-    {% endfor %}
-    </list>
-  </yearlist>
+{% for post in site.posts %}
+<ul class="tags">
+  {% for tag in post.tags %}
+    <li><a href="{{ site.baseurl }}tag/{{tag}}" class="tag">{{ tag }}</a></li>
   {% endfor %}
-</archieve>
+</ul>
+<div>
+  <span style="float: left;"><a href="{{ post.url }}">{{ post.title }}</span>
+  <span style="float: right;">{{ post.date | date_to_string }}</span>
+</div>
+<div style="clear: both;"></div>
+{% endfor %}
