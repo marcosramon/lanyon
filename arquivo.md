@@ -3,41 +3,25 @@ layout: page
 title: Arquivo
 ---
 
-<header class="archive">
-    {% include nav.html %}
-</header>
+<<a name="posts"></a>
+<archieve>
+  <name>Posts</name>
+  {%- assign posts = site.posts | where:"categories","post" -%}
+  {%- assign groupedByYear = posts | group_by_exp:"post","post.date | date:'%Y' " -%}
+  <!-- total posts: {{ posts.size }} -->
 
-<section class="archive">
-    {% if page.title == 'Archive' %}
-        <h1>{{ page.title }}</h1>
-        {% include archive_index.html %}
-    {% else %}
-        <h1>Archive: {{ page.title }}</h1>
-    {% endif %}
-    {% if page.tag and content != '' %}
-    <article title="{{ page.title }}">
-        <div class="content" style="position: relative; left: 0px;">
-            {{ content }}
+  {%- for yearitem in groupedByYear -%}
+  <yearlist>
+    <year>{{ yearitem.name }}</year>
 
-            <h2>Blogposts about {{ page.title }}:</h2>
-        </div>
-    </article>
-    {% endif %}
-    {% unless page.title == 'Archive' %}
-        <ul>
-            {% if page.month %}
-                {% include archive_month.html %}
-            {% elsif page.year %}
-                {% include archive_year.html %}
-            {% elsif page.tag %}
-                {% include archive_tag.html %}
-            {% endif %}
-        </ul>
-    {% endunless %}
-</section>
-
-<footer>
-    {% include footer.html %}
-</footer>
-
-{% include site_scripts.html %}
+    <list>
+    {%- for item in yearitem.items -%}
+      <item>
+        <date>{{ item.date | date:'%B %e'}}</date>
+        <span><a href="{{ item.url }}">{{ item.title }}</a></span>
+      </item>
+    {% endfor %}
+    </list>
+  </yearlist>
+  {% endfor %}
+</archieve>
