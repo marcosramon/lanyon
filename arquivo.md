@@ -3,21 +3,13 @@ layout: page
 title: Arquivo
 ---
 
-<!-- ## Blog Posts -->
+<h1>Arquivo {{ page.date | date: "%Y" }}</h1>
 
-<!-- {% for post in site.posts %}
-  * {{ post.date | date_to_string }} &raquo; [ {{ post.title }} ]({{ post.url }})
-{% endfor %} -->
-
-{% for post in site.posts %}
-<ul class="tags">
-  {% for tag in post.tags %}
-    <li><a href="{{ site.baseurl }}tag/{{tag}}" class="tag">{{ tag }}</a></li>
-  {% endfor %}
-</ul>
-<div>
-  <span style="float: left;"><a href="{{ post.url }}">{{ post.title }}</span>
-  <span style="float: right;">{{ post.date | date_to_string }}</span>
-</div>
-<div style="clear: both;"></div>
+<ul class="posts">
+{% for post in page.posts %}
+  <li>
+    <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+    <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+  </li>
 {% endfor %}
+</ul>
