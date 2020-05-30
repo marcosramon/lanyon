@@ -1,7 +1,7 @@
 # Setup
 title:               Marcos Ramon
 tagline:             'Um site sobre filosofia, arte e tecnologia'
-description:         'Sou professor de filosofia e pesquisador nas áreas de estética e cibercultura. Meus temas de interesse: tecnologia digital, arte, filosofia e cultura visual.'
+description:         'Sou professor de filosofia e pesquisador nas áreas de estética e cibercultura. Meus temas de interesse: tecnologia digital, arte, filosofia e cultura visual. Twitter: <a href="https://twitter.com/mrtollens>@mrtollens</a>'
 url:                 https://marcosramon.net
 baseurl:             ''
 paginate:            5
