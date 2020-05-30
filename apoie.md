@@ -19,7 +19,7 @@ Me siga nas redes sociais e compartilhe meus textos, vídeos e podcasts com outr
 
 [<i class="fab fa-twitter"></i> @mrtollens](https://twitter.com/mrtollens){: .btn .btn--info} 
 [<i class="fab fa-goodreads-g"></i> marcosramon](https://www.goodreads.com/author/show/16012578.Marcos_Ramon){: .btn .btn--primary} 
-[<i class="fab fa-youtube"></i> Conexão Filosófica](http://youtube.com/conexaofilosofica){: .btn .btn--danger}
+[<img src="font-awesome/youtube-brands.svg"> Conexão Filosófica](http://youtube.com/conexaofilosofica){: .btn .btn--danger}
 
 ## Compre um dos meus livros
 
